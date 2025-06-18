@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Game Interface</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>My Game Interface</h1>
+    </header>
+
+    <main id="game">
+      <section id="hud">
+        <p>Health: <span id="health">100</span></p>
+        <p>Gold: <span id="gold">0</span></p>
+      </section>
+
+      <section id="actions">
+        <button onclick="attack()">Attack!</button>
+        <button onclick="loot()">Loot Chest</button>
+      </section>
+
+      <section id="log">
+        <p>Welcome to the game.</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
