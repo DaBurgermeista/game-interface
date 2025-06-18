@@ -1,13 +1,26 @@
 // ./js/entity.js
 
 export class Entity {
-  constructor({ name, health, maxHealth, attack, defense, gold = 0 }) {
+  constructor({
+    name,
+    health,
+    maxHealth,
+    attack,
+    defense,
+    gold = 0,
+    inventory = [],
+  }) {
     this.name = name;
     this.health = health;
     this.maxHealth = maxHealth;
     this.attack = attack;
     this.defense = defense;
     this.gold = gold;
+    this.inventory = inventory;
+  }
+
+  addItem(item) {
+    this.inventory.push(item);
   }
 
   isAlive() {

@@ -1,5 +1,7 @@
 import { Entity, player, goblin } from "./entity.js";
-import { logMessage, updateHUD } from "./ui.js";
+import { logMessage, updateHUD, updateInventory } from "./ui.js";
+
+window.loot = loot;
 
 // ===== ON PAGE LOAD - DOM =====
 document.addEventListener("DOMContentLoaded", () => {
@@ -34,8 +36,11 @@ function attack() {
 }
 
 function loot() {
-  const goldFound = Math.floor(Math.random() * 25) + 5;
-  gold += goldFound;
-  logMessage(`You found a chest with ${goldFound} gold!`);
+  const items = ["Health Potion", "Rusty Sword", "Gold Ring", "Iron Shield"];
+  const found = items[Math.floor(Math.random() * items.length)];
+
+  player.addItem(found);
+  logMessage(`You found a ${found}!`);
   updateHUD();
+  updateInventory();
 }
