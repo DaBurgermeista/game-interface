@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Game Interface</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header>
@@ -18,8 +18,8 @@
       </section>
 
       <section id="actions">
-        <button onclick="attack()">Attack!</button>
-        <button onclick="loot()">Loot Chest</button>
+        <button id="attack-button">Attack!</button>
+        <button id="loot-button">Loot Chest</button>
       </section>
 
       <section id="log">
@@ -27,6 +27,6 @@
       </section>
     </main>
 
-    <script src="script.js"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
